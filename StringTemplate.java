@@ -23,7 +23,7 @@ public class StringTemplate {
         Map<String, String> targetParmas = params;
         if (ignoreCase) {
             final Map<String, String> transferParam = new HashMap<>();
-            params.entrySet().stream().forEach((entry) -> transferParam.put(entry.getKey().toUpperCase(), entry.getValue()));
+            params.entrySet().stream().forEach((entry) -> transferParam.put(entry.getKey().toUpperCase().trim(), entry.getValue()));
             targetParmas = transferParam;
         }
 
